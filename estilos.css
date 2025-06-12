@@ -1,0 +1,55 @@
+#formulario {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.descripcion {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="color"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}

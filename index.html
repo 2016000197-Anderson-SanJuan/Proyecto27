@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Colegio Salesiano Don Bosco</title>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body bgcolor="#f0f0f0" style="text-align: center;">
-	<h1>Colegio Salesiano Don Bosco</h1>
-	<nav>
-		<ul style="list-style-type: none; padding: 0;">
-			<li><a href="#">Guía de Aprendizaje 1</a></li>
-			<li><a href="#">Guía de Aprendizaje 2</a></li>
-			<li><a href="#">Guía de Aprendizaje 3</a></li>
-			<li><a href="#">Guía de Aprendizaje 4</a></li>
-			<li><a href="#">Prueba Corta 1</a></li>
-			<li><a href="#">Prueba Corta 2</a></li>
-			<li><a href="#">Examen de Unidad</a></li>
-		</ul>
-	</nav>
-	<h2>Datos Académicos</h2>
-	<table border="1" align="center">
-		<tr>
-			<th><b>Campo</b></th>
-			<th><b>Dato</b></th>
-		</tr>
-		<tr>
-			<td><b>Nombre del Estudiante</b></td>
-			<td>Julian Urizar</td>
-		</tr>
-		<tr>
-			<td><b>Clave</b></td>
-			<td>27</td>
-		</tr>
-		<tr>
-			<td><b>Grado</b></td>
-			<td>IV Bachillerato</td>
-		</tr>
-		<tr>
-			<td><b>Nombre del Docente</td>
-				<td>Prof. Aquino</td>
-		</tr>
-	</table>
+<body>
+    <section id="formulario">
+        <form name="frmregistro" method="post" action="#">
+            <h1>FORMULARIO DE REGISTRO</h1>
+            <p class="descripcion">Complete el formulario con sus datos</p>
+            <table>
+                <tr>
+                    <td><label for="txtnombres">Nombres y apellidos</label></td>
+                    <td><input type="text" id="txtnombres" name="txtnombres" placeholder="Ingrese datos completos" required></td>
+                </tr>
+                <tr>
+                    <td><label for="txtdni">DNI</label></td>
+                    <td><input type="text" id="txtdni" name="txtdni" placeholder="8 caracteres" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="txtfono">Teléfono</label></td>
+                    <td><input type="tel" id="txtfono" name="txtfono"></td>
+                </tr>
+                <tr>
+                    <td><label>Estudios realizados</label></td>
+                    <td>
+                        <input type="checkbox" name="chkprimaria" checked> Primaria
+                        <input type="checkbox" name="chksecundaria"> Secundaria<br>
+                        <input type="checkbox" name="chktecnico"> Técnico
+                        <input type="checkbox" name="chkuniversitario"> Universitario
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Estado civil</label></td>
+                    <td>
+                        <input type="radio" name="btnestado" value="s" checked> Soltero
+                        <input type="radio" name="btnestado" value="c"> Casado
+                        <input type="radio" name="btnestado" value="v"> Viudo
+                        <input type="radio" name="btnestado" value="d"> Divorciado
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtprovincia">Provincia</label></td>
+                    <td>
+                        <input type="text" name="txtprovincia" list="provincias">
+                        <datalist id="provincias">
+                            <option value="Lima">
+                            <option value="Arequipa">
+                            <option value="Tacna">
+                            <option value="Trujillo">
+                            <option value="Huancayo">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtemail">Correo electrónico</label></td>
+                    <td><input type="email" name="txtemail" id="txtemail"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtclave">Clave personal</label></td>
+                    <td><input type="password" name="txtclave" id="txtclave" placeholder="Máximo 6 caracteres"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtcolor">Color de preferencia</label></td>
+                    <td><input type="color" name="txtcolor" id="txtcolor"></td>
+                </tr>
+                <tr>
+                    <td><label for="txtfecha">Fecha de nacimiento</label></td>
+                    <td><input type="datetime-local" name="txtfecha" id="txtfecha"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Registrar">
+                        <input type="reset" value="Limpiar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
 </body>
 </html>
